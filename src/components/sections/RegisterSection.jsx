@@ -17,28 +17,47 @@ function RegisterInput({ register }) {
       !password.trim() ||
       !confirmPassword.trim()
     ) {
-      alert(
-        "All fields must be filled!"
-      );
-
+      alert("All fields must be filled!");
       return;
     }
 
-    // validasi confirm password
     if (password !== confirmPassword) {
       alert("Password dan Confirm Password tidak sama!");
+      return;
+    }
+
+    // 🔥 ambil semua user (ARRAY)
+    const users = JSON.parse(localStorage.getItem("users")) || [];
+
+    // cek email sudah dipakai atau belum
+    const userExists = users.find(
+      (u) => u.email === email
+    );
+
+    if (userExists) {
+      alert("Email sudah terdaftar!");
       return;
     }
 
     const userData = {
       name,
       email,
+      password,
     };
 
-    localStorage.setItem(
-      "user",
-      JSON.stringify(userData)
-    );
+    // 🔥 simpan ke array users
+    users.push(userData);
+    localStorage.setItem("users", JSON.stringify(users));
+
+    // login otomatis user baru
+    localStorage.setItem("user", JSON.stringify({
+      name,
+      email
+    }));
+
+    localStorage.setItem("token", "true");
+
+    window.dispatchEvent(new Event("authChange"));
 
     register({
       name,

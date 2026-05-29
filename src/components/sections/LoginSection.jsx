@@ -21,15 +21,17 @@ function LoginSection({ login }) {
     }
 
     // ambil user yang sudah tersimpan
-    const storedUser = JSON.parse(
-      localStorage.getItem("user")
+    const users = JSON.parse(localStorage.getItem("users")) || [];
+
+    const storedUser = users.find(
+      (u) => u.email === email
     );
 
-    // validasi sederhana
-    if (
-      storedUser &&
-      storedUser.email === email
-    ) {
+    if (storedUser) {
+      localStorage.setItem("token", "true");
+      localStorage.setItem("user", JSON.stringify(storedUser));
+
+      window.dispatchEvent(new Event("authChange"));
       login({ email, password });
     } else {
       alert("User tidak ditemukan!");

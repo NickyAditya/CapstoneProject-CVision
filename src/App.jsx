@@ -4,9 +4,9 @@ import LoginPage from "./pages/LoginPage";
 import RegisterPage from "./pages/RegisterPage";
 import LandingPage from "./pages/LandingPage";
 import HistoryPage from "./pages/HistoryPage";
-import MyAccountPage from "./pages/MyAccountPage";
 import ResumeAnalysisPage from "./pages/ResumeAnalysisResultPage";
 import ProfileAnalysisPage from "./pages/ProfileAnalysisResultPage";
+import ProtectedRoute from "./components/ProtectedRoute";
 
 function App() {
   return (
@@ -24,34 +24,35 @@ function App() {
 
       <Route
         path="/"
-        element={<LandingPage />}
+        element={ <LandingPage /> }
       />
 
       <Route
         path="/resume-analysis"
-        element={<ResumeAnalysisPage />}
-      />
-      
-      <Route
-        path="/profile-analysis"
-        element={<ProfileAnalysisPage />}
+        element={
+          <ProtectedRoute>
+            <ResumeAnalysisPage />
+          </ProtectedRoute>
+        }
       />
 
       <Route
-        path="/account"
-        element={<MyAccountPage />}
+        path="/profile-analysis"
+        element={
+          <ProtectedRoute>
+            <ProfileAnalysisPage />
+          </ProtectedRoute>
+        }
       />
 
       <Route
         path="/history"
-        element={<HistoryPage />}
+        element={
+          <ProtectedRoute>
+            <HistoryPage />
+          </ProtectedRoute>
+        }
       />
-
-      <Route
-        path="/account"
-        element={<MyAccountPage />}
-      />
-
     </Routes>
   );
 }
