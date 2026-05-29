@@ -1,0 +1,250 @@
+/* How It Works Section */
+.how-it-works-section {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0px 0 80px;
+}
+
+/* Section Header */
+.how-it-works-header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.how-it-works-badge {
+  display: inline-block;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 800;
+  font-size: 12px;
+  color: #2563eb;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  background: linear-gradient(145deg, #eff6ff, #dbeafe);
+  border: 2px solid #bfdbfe;
+  border-radius: 20px;
+  padding: 4px 18px;
+  box-shadow: 3px 3px 0px #93c5fd;
+  margin-bottom: 12px;
+}
+
+.how-it-works-title {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 900;
+  font-size: 34px;
+  color: #1e40af;
+  margin: 0;
+}
+
+/* Steps Container */
+.steps-container {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  justify-content: center;
+}
+
+/* Step Item */
+.step-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  max-width: 240px;
+}
+
+/* Step Icon Box */
+.step-icon-container {
+  position: relative;
+}
+
+.step-icon-box {
+  width: 80px;
+  height: 80px;
+  border-radius: 24px;
+  background: linear-gradient(145deg, #e0f2fe, #bfdbfe);
+  box-shadow: 6px 6px 0px #93c5fd, inset 0 1px 0 rgba(255, 255, 255, 0.9);
+  border: 2.5px solid #93c5fd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+}
+
+.step-custom-icon {
+  width: 35px;
+  height: 35px;
+  object-fit: contain;
+  filter: drop-shadow(4px 4px 8px rgba(0,0,0,0.15));
+}
+
+/* Step Number Badge */
+.step-number-badge {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  width: 28px;
+  height: 28px;
+  border-radius: 10px;
+  box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.2);
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 900;
+  font-size: 13px;
+  color: #fff;
+}
+
+/* Step Title */
+.step-title {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 900;
+  font-size: 16px;
+  color: #1e40af;
+  text-align: center;
+  margin: 0;
+}
+
+/* Step Description */
+.step-description {
+  font-size: 13px;
+  color: #60a5fa;
+  font-family: 'Nunito', sans-serif;
+  text-align: center;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Step Separator */
+.step-separator {
+  font-size: 28px;
+  color: #93c5fd;
+  margin: 0 20px;
+  margin-bottom: 40px;
+}
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+/* Tablet */
+@media (max-width: 1024px) {
+
+  .how-it-works-section {
+    padding: 0 20px 70px;
+  }
+
+  .steps-container {
+    flex-wrap: wrap;
+    gap: 28px;
+  }
+
+  .step-separator {
+    display: none;
+  }
+
+  .step-item {
+    max-width: 280px;
+  }
+
+  .how-it-works-title {
+    font-size: 30px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+
+  .how-it-works-section {
+    padding: 0 16px 60px;
+  }
+
+  .how-it-works-header {
+    margin-bottom: 36px;
+  }
+
+  .how-it-works-title {
+    font-size: 26px;
+    line-height: 1.3;
+  }
+
+  .how-it-works-badge {
+    font-size: 11px;
+    letter-spacing: 2px;
+    padding: 4px 14px;
+  }
+
+  .steps-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .step-item {
+    max-width: 100%;
+  }
+
+  .step-icon-box {
+    width: 72px;
+    height: 72px;
+    border-radius: 22px;
+    font-size: 28px;
+  }
+
+  .step-custom-icon {
+    width: 30px;
+    height: 30px;
+  }
+
+  .step-number-badge {
+    width: 26px;
+    height: 26px;
+    font-size: 12px;
+  }
+
+  .step-title {
+    font-size: 15px;
+  }
+
+  .step-description {
+    font-size: 12px;
+    max-width: 300px;
+  }
+
+  .step-separator {
+    display: none;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+
+  .how-it-works-section {
+    padding: 0 12px 50px;
+  }
+
+  .how-it-works-title {
+    font-size: 22px;
+  }
+
+  .step-icon-box {
+    width: 64px;
+    height: 64px;
+    border-radius: 20px;
+  }
+
+  .step-custom-icon {
+    width: 26px;
+    height: 26px;
+  }
+
+  .step-title {
+    font-size: 14px;
+  }
+
+  .step-description {
+    font-size: 11px;
+    line-height: 1.4;
+  }
+}

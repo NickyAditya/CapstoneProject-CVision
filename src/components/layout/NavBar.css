@@ -1,0 +1,169 @@
+/* NavBar Container */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(16px);
+  border-bottom: 2.5px solid #bfdbfe;
+  box-shadow: 0 4px 0px #dbeafe;
+  padding: 0 40px;
+}
+
+.navbar-wrapper {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+  transform: translateZ(0);
+}
+
+/* Logo Section */
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.navbar-logo-icon {
+  width: 38px;
+  height: 38px;
+  border-radius: 12px;
+  background: linear-gradient(145deg, #3b82f6, #2563eb);
+  box-shadow: 3px 3px 0px #1e40af;
+  border: 2px solid #60a5fa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  color: #fff;
+  font-weight: 900;
+}
+
+.navbar-logo-text-primary {
+  font-family: "Nunito", sans-serif;
+  font-weight: 900;
+  font-size: 18px;
+  color: #1e40af;
+  line-height: 1;
+}
+
+.navbar-logo-text-secondary {
+  font-size: 10px;
+  color: #60a5fa;
+  font-family: "Nunito", sans-serif;
+  font-weight: 600;
+}
+
+/* Navigation Menu */
+.navbar-menu {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.navbar-menu a {
+  text-decoration: none;
+}
+
+/* Menu Button */
+.navbar-menu-button {
+  background: linear-gradient(145deg, #fff, #eff6ff);
+  border-radius: 16px;
+  box-shadow: 4px 4px 0px #93c5fd;
+  border: 2.5px solid #bfdbfe;
+  color: #2563eb;
+  font-weight: 700;
+  padding: 8px 20px;
+  font-size: 14px;
+  font-family: "Nunito", sans-serif;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+/* Hover Effect */
+.navbar-menu-button:hover {
+  transform: translateY(-2px);
+  filter: brightness(0.98);
+}
+
+/* Active Menu */
+.navbar-menu-button-active {
+  background: linear-gradient(145deg,#3b82f6,#2563eb);
+  color: #ffffff;
+  border: 2.5px solid #60a5fa;
+  box-shadow:
+    4px 4px 0px #1e40af,
+    inset 0 1px 0
+      rgba(255, 255, 255, 0.3);
+}
+
+/* Active Hover */
+.navbar-menu-button-active:hover {
+  filter: brightness(1.05);
+}
+
+.navbar-account {
+  position: relative;
+}
+
+.account-dropdown {
+  position: absolute;
+  top: 120%;
+  right: 0;
+  width: 75px;
+  background: white;
+  border-radius: 14px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  z-index: 100;
+}
+
+.dropdown-item {
+  text-decoration: none;
+  color: #1e293b;
+  padding: 12px 14px;
+  border-radius: 10px;
+  font-size: 15px;
+  transition: 0.2s;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+}
+
+.dropdown-item:hover {
+  background: #f1f5f9;
+}
+
+.logout-button {
+  color: #dc2626;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0 20px;
+  }
+
+  .navbar-wrapper {
+    height: auto;
+    padding: 14px 0;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .navbar-menu {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .navbar-menu-button {
+    padding: 8px 16px;
+    font-size: 13px;
+  }
+}

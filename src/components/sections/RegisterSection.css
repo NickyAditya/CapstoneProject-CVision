@@ -1,0 +1,130 @@
+.register-page-container {
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  overflow: hidden;
+}
+
+.register-page {
+  width: 100%;
+  max-width: 500px;
+}
+
+.register-card {
+  border-radius: 28px;
+  border: 2.5px solid #bfdbfe;
+  padding: 34px;
+  box-shadow:
+    10px 10px 0px #93c5fd,
+    inset 0 1px 0
+      rgba(255, 255, 255, 0.9);
+}
+
+.register-card h2 {
+  margin: 0 0 10px;
+  color: #1e40af;
+  font-size: 30px;
+  font-weight: 900;
+  font-family: "Nunito", sans-serif;
+}
+
+.register-description {
+  margin-bottom: 28px;
+  color: #64748b;
+  font-size: 14px;
+  line-height: 1.6;
+  font-family: "Nunito", sans-serif;
+}
+
+.register-input {
+  margin-top: 18px;
+}
+
+.register-input input {
+  width: 100%;
+  display: block;
+  padding: 16px;
+  margin: 10px 0;
+  border-radius: 16px;
+  border: 2px solid #dbeafe;
+  background: #ffffff;
+  font-size: 15px;
+  font-family: "Nunito", sans-serif;
+  color: #1e293b;
+  outline: none;
+  transition: 0.2s ease;
+  box-sizing: border-box;
+}
+
+.register-input input:focus {
+  border-color: #3b82f6;
+  box-shadow:
+    0 0 0 4px
+    rgba(59, 130, 246, 0.12);
+}
+
+.register-input button {
+  width: 100%;
+  margin-top: 20px;
+  padding: 15px 20px;
+  border-radius: 16px;
+  border: 2px solid #60a5fa;
+  background: linear-gradient(
+    145deg,
+    #3b82f6,
+    #2563eb
+  );
+
+  box-shadow:
+    4px 4px 0px #1e40af,
+    inset 0 1px 0
+      rgba(255, 255, 255, 0.3);
+
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 800;
+  font-family: "Nunito", sans-serif;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.register-input button:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.05);
+}
+
+.back-to-login {
+  margin-top: 24px;
+  text-align: center;
+  color: #64748b;
+  font-size: 14px;
+  font-family: "Nunito", sans-serif;
+}
+
+.back-to-login a {
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: 800;
+  transition: 0.2s ease;
+}
+
+.back-to-login a:hover {
+  opacity: 0.8;
+  text-decoration: underline;
+}
+
+@media (max-width: 576px) {
+  .register-card {
+    padding: 26px;
+  }
+
+  .register-logo {
+    font-size: 34px;
+  }
+
+  .register-card h2 {
+    font-size: 26px;
+  }
+}

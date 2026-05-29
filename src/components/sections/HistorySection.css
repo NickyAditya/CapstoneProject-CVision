@@ -1,0 +1,471 @@
+.history-page {
+  max-width: 1200px;
+  margin: auto;
+  padding: 40px;
+  font-family: "Nunito", sans-serif;
+  box-sizing: border-box;
+}
+
+/* ================= HEADER ================= */
+
+.history-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 24px;
+  margin-bottom: 34px;
+}
+
+.history-header h1 {
+  margin: 0;
+  font-size: 54px;
+  line-height: 1;
+  font-weight: 900;
+  letter-spacing: -1px;
+  color: #1d4ed8;
+}
+
+.history-header p {
+  margin-top: 14px;
+  font-size: 15px;
+  line-height: 1.8;
+  color: #64748b;
+}
+
+.history-header-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 6px;
+}
+
+/* ================= SEARCH ================= */
+
+.search-box {
+  width: 360px;
+  height: 56px;
+  padding: 0 18px;
+
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  background: #ffffff;
+  border: 1.5px solid #dbeafe;
+  border-radius: 16px;
+
+  box-sizing: border-box;
+  transition: 0.2s ease;
+}
+
+.search-box:focus-within {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.08);
+}
+
+.search-box input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+
+  color: #0f172a;
+  font-size: 14px;
+  font-family: "Nunito", sans-serif;
+}
+
+.search-icon {
+  font-size: 16px;
+}
+
+/* ================= FILTER BUTTON ================= */
+
+.filter-button {
+  height: 56px;
+  padding: 0 22px;
+
+  border: 1.5px solid #bfdbfe;
+  border-radius: 16px;
+
+  background: #ffffff;
+  color: #2563eb;
+
+  font-size: 14px;
+  font-weight: 800;
+  font-family: "Nunito", sans-serif;
+
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.filter-button:hover {
+  background: #eff6ff;
+  transform: translateY(-2px);
+}
+
+/* ================= STATS ================= */
+
+.history-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-bottom: 34px;
+}
+
+.stats-card {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+
+  padding: 24px;
+
+  background: #ffffff;
+  border: 1.5px solid #dbeafe;
+  border-radius: 24px;
+
+  box-shadow: 0 8px 24px rgba(37, 99, 235, 0.05);
+  transition: 0.25s ease;
+}
+
+.stats-card:hover {
+  transform: translateY(-3px);
+}
+
+.stats-icon {
+  width: 68px;
+  height: 68px;
+
+  border-radius: 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  font-size: 28px;
+  color: white;
+}
+
+.stats-icon.blue {
+  background: linear-gradient(135deg, #60a5fa, #2563eb);
+}
+
+.stats-icon.green {
+  background: linear-gradient(135deg, #4ade80, #16a34a);
+}
+
+.stats-icon.purple {
+  background: linear-gradient(135deg, #c084fc, #7c3aed);
+}
+
+.stats-card p {
+  margin: 0;
+  color: #64748b;
+  font-size: 13px;
+}
+
+.stats-card h2 {
+  margin: 6px 0;
+  font-size: 30px;
+  line-height: 1.1;
+  font-weight: 900;
+  color: #1e3a8a;
+}
+
+.stats-card span {
+  font-size: 12px;
+  color: #94a3b8;
+}
+
+/* ================= TABLE CARD ================= */
+
+.history-table-card {
+  padding: 28px;
+
+  background: #ffffff;
+  border: 1.5px solid #dbeafe;
+  border-radius: 28px;
+
+  box-shadow: 0 10px 32px rgba(37, 99, 235, 0.05);
+}
+
+.history-table-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 26px;
+}
+
+.history-table-header h2 {
+  margin: 0;
+
+  color: #1d4ed8;
+  font-size: 34px;
+  font-weight: 900;
+}
+
+.sort-select {
+  height: 48px;
+  padding: 0 16px;
+
+  border: 1.5px solid #dbeafe;
+  border-radius: 14px;
+
+  background: #ffffff;
+
+  font-size: 14px;
+  font-family: "Nunito", sans-serif;
+
+  outline: none;
+  cursor: pointer;
+}
+
+/* ================= TABLE ================= */
+
+.history-table {
+  width: 100%;
+}
+
+.table-row {
+  display: grid;
+  grid-template-columns:
+    2fr
+    1.5fr
+    1.3fr
+    1.1fr
+    1.1fr
+    0.9fr;
+
+  align-items: center;
+  gap: 16px;
+
+  padding: 20px 0;
+
+  border-bottom: 1px solid #eef2ff;
+}
+
+.table-head {
+  padding-top: 0;
+}
+
+.table-head div {
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  color: #64748b;
+}
+
+.table-row h4 {
+  margin: 0 0 5px;
+
+  color: #1e3a8a;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.table-row span {
+  color: #64748b;
+  font-size: 12px;
+}
+
+/* ================= FILE ================= */
+
+.file-column {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.file-icon {
+  width: 50px;
+  height: 50px;
+
+  border-radius: 15px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  color: white;
+  font-size: 10px;
+  font-weight: 900;
+}
+
+.file-icon.pdf {
+  background: linear-gradient(135deg, #ef4444, #dc2626);
+}
+
+.file-icon.docx {
+  background: linear-gradient(135deg, #3b82f6, #2563eb);
+}
+
+/* ================= CATEGORY ================= */
+
+.category-tag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 8px 14px;
+
+  border-radius: 999px;
+
+  background: #eff6ff;
+
+  color: #2563eb !important;
+  font-size: 11px !important;
+  font-weight: 800 !important;
+}
+
+/* ================= SCORE ================= */
+
+.score-column h4 {
+  margin-bottom: 10px;
+}
+
+.score-bar {
+  width: 100%;
+  height: 7px;
+
+  background: #e2e8f0;
+  border-radius: 999px;
+
+  overflow: hidden;
+}
+
+.score-fill {
+  height: 100%;
+  border-radius: 999px;
+}
+
+/* ================= ACTION ================= */
+
+.action-column {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.view-button,
+.more-button {
+  border: 1.5px solid #dbeafe;
+  border-radius: 12px;
+
+  background: #ffffff;
+  color: #2563eb;
+
+  font-size: 12px;
+  font-weight: 800;
+  font-family: "Nunito", sans-serif;
+
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.view-button {
+  padding: 10px 14px;
+}
+
+.more-button {
+  width: 40px;
+  height: 40px;
+}
+
+.view-button:hover,
+.more-button:hover {
+  background: #eff6ff;
+  transform: translateY(-2px);
+}
+
+/* ================= PAGINATION ================= */
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+
+  margin-top: 30px;
+}
+
+.pagination button {
+  width: 42px;
+  height: 42px;
+
+  border: 1.5px solid #dbeafe;
+  border-radius: 12px;
+
+  background: #ffffff;
+  color: #2563eb;
+
+  font-weight: 800;
+
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.pagination button:hover {
+  background: #eff6ff;
+}
+
+.pagination button.active {
+  background: #2563eb;
+  border-color: #2563eb;
+  color: white;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 992px) {
+  .history-header {
+    flex-direction: column;
+  }
+
+  .history-header-right {
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .search-box {
+    width: 100%;
+  }
+
+  .history-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .history-table {
+    overflow-x: auto;
+  }
+
+  .table-row {
+    min-width: 920px;
+  }
+}
+
+@media (max-width: 768px) {
+  .history-page {
+    padding: 24px 18px 50px;
+  }
+
+  .history-header h1 {
+    font-size: 42px;
+  }
+
+  .history-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .history-table-card {
+    padding: 22px;
+  }
+
+  .history-table-header h2 {
+    font-size: 28px;
+  }
+}
