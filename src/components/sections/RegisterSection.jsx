@@ -23,12 +23,22 @@ function RegisterInput({ register }) {
 
       return;
     }
-    
+
     // validasi confirm password
     if (password !== confirmPassword) {
       alert("Password dan Confirm Password tidak sama!");
       return;
     }
+
+    const userData = {
+      name,
+      email,
+    };
+
+    localStorage.setItem(
+      "user",
+      JSON.stringify(userData)
+    );
 
     register({
       name,

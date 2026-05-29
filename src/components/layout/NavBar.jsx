@@ -9,8 +9,9 @@ export default function NavBar() {
   const dropdownRef = useRef(null);
 
   // contoh user login
-  const user = {
-    name: "Fachri",
+  const user =
+  JSON.parse(localStorage.getItem("user")) || {
+    name: "Guest",
   };
 
   function handleLogout() {

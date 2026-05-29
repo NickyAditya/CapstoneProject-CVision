@@ -19,8 +19,21 @@ function LoginSection({ login }) {
 
       return;
     }
-    
-    login({ email, password });
+
+    // ambil user yang sudah tersimpan
+    const storedUser = JSON.parse(
+      localStorage.getItem("user")
+    );
+
+    // validasi sederhana
+    if (
+      storedUser &&
+      storedUser.email === email
+    ) {
+      login({ email, password });
+    } else {
+      alert("User tidak ditemukan!");
+    }
   }
 
   return (
